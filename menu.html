@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<title>Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("img/cafe11.jpg");
+  min-height: 100%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Menu Pilihan Atas -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="index.html" class="w3-button w3-block w3-black">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="about.html" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="menu.html" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="login.php" class="w3-button w3-block w3-black">ADMIN</a>
+    </div>
+  </div>
+</div>
+
+<!-- Warna latar belakang dan teks besar seluruh halaman -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">MENU LAYYA CAFE</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Makanan</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Minuman</div>
+      </a>
+    </div>
+
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Bread Basket</h5>
+      <p class="w3-text-grey">Bermacam-macam roti buah panggang segar dan muffin IDR 15</p><br>
+    
+      <h5>Honey Almond Granola with Fruits</h5>
+      <p class="w3-text-grey">Sereal alami dari madu panggang oat, kismis, almond dan kurma IDR 20</p><br>
+    
+      <h5>Belgian Waffle</h5>
+      <p class="w3-text-grey">Rasa vanilla dengan tepung malt IDR 25</p><br>
+    
+      <h5>Scrambled eggs</h5>
+      <p class="w3-text-grey">Telur orak-arik, paprika merah panggang dan bawang putih, dengan daun bawang IDR 25</p><br>
+    
+      <h5>Blueberry Pancakes</h5>
+      <p class="w3-text-grey">Dengan sirup, mentega, dan banyak beri IDR 25</p>
+    </div>
+
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">Kopi biasa IDR 5 </p><br>
+    
+      <h5>Chocolato</h5>
+      <p class="w3-text-grey">Espresso cokelat dengan susu IDR 15</p><br>
+    
+      <h5>Corretto</h5>
+      <p class="w3-text-grey">Wiski dan kopi IDR 15</p><br>
+    
+      <h5>Iced tea</h5>
+      <p class="w3-text-grey">Teh panas, kecuali tidak panas IDR 10</p><br>
+    
+      <h5>Soda</h5>
+      <p class="w3-text-grey">Coke, Sprite, Fanta, dll IDR 10</p>
+    </div>  
+    <img src="img/cafe6.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by Layya Cafe</p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
